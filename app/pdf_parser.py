@@ -1,4 +1,7 @@
-import fitz  # PyMuPDF
+try:
+    import fitz  # PyMuPDF
+except ImportError:
+    import pymupdf as fitz  # 备选导入方式
 
 def extract_text_from_pdf(file_path_or_bytes):
     """
