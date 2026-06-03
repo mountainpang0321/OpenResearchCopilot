@@ -1,0 +1,23 @@
+虚拟环境
+
+venv/
+ORC/
+env/
+
+环境变量与密钥 (绝对不能上传)
+
+.env
+
+Python 缓存文件
+
+pycache/
+*.py[cod]
+*$py.class
+
+Mac 系统文件
+
+.DS_Store
+
+自动生成的输出报告 (可按需决定是否上传)
+
+outputs/

@@ -1,0 +1,54 @@
+OpenResearch Copilot (PaperPilot MVP)
+
+这是本地科研文献分析 Agent 的第一阶段 MVP 版本。它实现了从本地上传 PDF 到提取结构化信息（问题、方法、数据集、创新点）并生成 Markdown 报告的完整闭环。
+
+🛠️ 环境准备
+
+确保安装了 Python 3.11。
+
+在 VS Code 中打开本文件夹。
+
+创建并激活虚拟环境：
+
+python -m venv venv
+# Windows 激活
+venv\Scripts\activate
+# Mac/Linux 激活
+source venv/bin/activate
+
+
+安装依赖：
+
+pip install -r requirements.txt
+
+
+🚀 运行方法
+
+打开 .env 文件，填入你的 OpenAI API Key。
+
+在终端（需确保在虚拟环境且位于项目根目录）运行以下命令启动 Streamlit：
+
+streamlit run app/main.py
+
+
+浏览器会自动打开 http://localhost:8501，即可体验你的 Copilot！
+
+📂 目录结构
+
+app/：核心代码目录
+
+main.py：UI 入口
+
+pdf_parser.py：负责 PDF 文本提取
+
+chunker.py：处理文本长度（预留）
+
+analyzer.py：负责与 OpenAI 通信并提取 JSON
+
+report_generator.py：排版并输出报告
+
+outputs/：生成的 Markdown 报告存放处（运行后自动生成）
+
+.env：密钥存储（需自行创建/配置）
+
+requirements.txt：项目依赖列表
